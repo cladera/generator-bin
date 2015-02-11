@@ -9,8 +9,6 @@ var GeneratorCommand = module.exports = yeoman.generators.Base.extend({
     this.pkg = require('../package.json');
     this.argument('name', {type: String, required: true});
     this.name = this.name || path.basename(process.cwd());
-    this.name = this._.camelize(this._.slugify(this._.humanize(this.name)));
-
   },
 
   prompting: function () {
@@ -67,5 +65,9 @@ var GeneratorCommand = module.exports = yeoman.generators.Base.extend({
     this.installDependencies({
       skipInstall: true
     });
+  },
+
+  installingNomnom: function(){
+    this.npmInstall(['nomnom']);
   }
 });

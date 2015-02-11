@@ -11,14 +11,13 @@ module.exports = yeoman.generators.Base.extend({
       desc: 'The command name'
     });
     this.name = this.name || path.basename(process.cwd());
-    this.name = this._.camelize(this._.slugify(this._.humanize(this.name)));
     this.binChoices = [];
     var self = this;
     fs.readdirSync('./').forEach(function(file){
       if(file[0] !== '.'){
         var filePath = './'+file;
         var stat = fs.statSync(filePath);
-        if(stat.isDirectory()){
+        if(stat.isDirectory() && file !== 'node_modules'){
           self.binChoices.push(file);
         }
       }
@@ -34,7 +33,7 @@ module.exports = yeoman.generators.Base.extend({
     var prompts = [{
       type: 'list',
       name: 'bin',
-      message: 'Which binary do you want the command for?',
+      message: 'Select a toolkit:',
       choices: this.binChoices
     }];
 
