@@ -1,7 +1,3 @@
-/**
- * Created by cgcladera on 11/02/15.
- */
-
 module.exports = function(parser){
   parser
     .nocommand()
