@@ -1,10 +1,10 @@
 {
   "name": "generator-bin",
-  "version": "0.0.1",
-  "description": "Yeoman generator",
+  "version": "0.0.2",
+  "description": "NodeJS Toolkits generator",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "cladera/generator-command",
+  "repository": "cladera/generator-bin",
   "author": {
     "name": "Carlos Galan Cladera",
     "email": "cgcladera@gmail.com",
