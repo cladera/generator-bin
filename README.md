@@ -1,4 +1,4 @@
-# generator-command [![Build Status](https://secure.travis-ci.org/cladera/generator-bin.png?branch=master)](https://travis-ci.org/cladera/generator-bin)
+# generator-bin [![Build Status](https://secure.travis-ci.org/cladera/generator-bin.png?branch=master)](https://travis-ci.org/cladera/generator-bin)
 
 Generate command-line toolkits with NodeJS. Based on project [nomnom](https://github.com/harthur/nomnom).
 
