@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 
 var parser = require('nomnom'),
-    fs     = require('fs');
+    fs     = require('fs'),
+    path   = require('path');
 
 
-fs.readdirSync('./<%= name %>').forEach(function(file){
-  require('./<%= name %>/'+file)(parser);
+fs.readdirSync(path.join(__dirname, './<%= name %>')).forEach(function(file){
+  require(path.join(__dirname,'./<%= name %>/'+file))(parser);
 });
 
 parser.parse();
